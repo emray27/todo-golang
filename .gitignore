@@ -1,0 +1,61 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Output of the go coverage tool
+*.out
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Logs
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Vendor directory
+vendor/
+
+# Dependency directories
+bin/
+pkg/
+
+# Compiled Object files
+*.o
+*.a
+*.lo
+*.la
+*.lai
+
+# Backup files
+*~
+*.swp
+*.swo
+*.tmp
+*.bak
+*.old
+*.orig
+*.rej
+
+# Ignore directories used by tools like dep, glide, and gopkg
+_GOPATH
+Godeps/
+
+# Ignore local env files
+.env
+.env.local
+.env.*.local
+
+# Ignore mod and sum files
+go.sum
+tmp
