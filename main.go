@@ -1,15 +1,29 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
 	"github.com/emray27/todo-golang/app"
+	"github.com/joho/godotenv"
 )
 
 func main() {
 	// Setup the router with routes
 	r := app.SetupRouter()
+
+	err := godotenv.Load()
+	if err != nil {
+		fmt.Println("Not able to load godotenv")
+	}
+
+	_, mongoError := app.GetMongoClient()
+
+	if mongoError != nil {
+		fmt.Println(mongoError)
+		return
+	}
 
 	// Define the server address
 	address := ":8000"
